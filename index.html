@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>真常应物的心得</title>
+    <style>
+        .taiChi {
+    background: #fff;
+    width: 96px;
+    height: 96px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+}
+
+.taiChi:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border: 18px solid white;
+    top: 0;
+    left: 50%;
+    border-radius: 100%;
+}
+
+.taiChi:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 18px solid black;
+    left: 50%;
+    bottom: 0;
+    border-radius: 100%;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }    
+}
+
+.taiChi{
+    background:#fff;
+    width:48px;
+    height:96px;
+    border-color:black;
+    border-style:solid;
+    border-width:2px 50px 2px 2px;
+    border-radius:100%;
+    position:relative;
+    animation-duration: 5s;/*每3s转一圈*/
+    animation-name: spin;
+    animation-iteration-count: infinite;/*无限制循环*/
+    animation-timing-function: linear;/*匀速转动*/
+}
+
+    </style>
 </head>
 <body>
+    <!--拉出太极图-->
+    <div class="taiChi"></div>
     <p>真常应物的心得<p>
 </body>
 </html>
